@@ -1,0 +1,19 @@
+<ion-view view-title="Dashboard">
+  <ion-nav-buttons side="right">
+    <button class="button button-calm" ng-click="modal.show()">
+      Agregar
+    </button>
+  </ion-nav-buttons>
+  <ion-content >
+    <div class="list">
+      <ion-list>
+        <ion-item ng-repeat="contacto in listaContacto">
+          {{contacto.nombre}}
+          <ion-option-button class="button-assertive" ng-click="eliminarContacto(contacto.idContacto)">
+            Eliminar
+          </ion-option-button>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>
